@@ -9,4 +9,4 @@ echo -e "GIT_BRANCH=${GIT_BRANCH}\nGIT_SHA=${GIT_SHA}"
 
 git submodule init && git submodule update --recursive
 
-hugo
+hugo ${INPUT_HUGO_ARGS}
