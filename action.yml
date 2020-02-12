@@ -8,8 +8,9 @@ branding:
 runs:
   using:            'docker'
   image:            'docker://blbecker/hugo-build:latest'
-  inputs:
-    hugo_args:
-      description:    "Additional arguments to pass to hugo"
-      required:       false
+
+inputs:
+  hugo_args:
+    description:    "Additional arguments to pass to hugo"
+    required:       false
 
