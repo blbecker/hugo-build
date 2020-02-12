@@ -9,5 +9,5 @@ inputs:
 
 runs:
   using:            'docker'
-  image:            'docker://blbecker/hugo-deploy:release-v0.3'
+  image:            'docker://blbecker/hugo-build:latest'
 
