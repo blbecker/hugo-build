@@ -1,16 +1,15 @@
-name:               "Hugo Build"
-author:             Benjamin Becker
-description:        "Perform a hugo build"
+name:            "Hugo Build Project"
+author:          Benjamin Becker
+description:     "Perform a hugo build"
 branding:
-  icon:             arrow-right
-  color:            purple
+  icon:          arrow-right
+  color:         purple
 
 runs:
-  using:            'docker'
-  image:            'docker://blbecker/hugo-build:1.0'
+  using:         'docker'
+  image:         'docker://blbecker/hugo-build:1.0'
 
 inputs:
   hugo_args:
-    description:    "Additional arguments to pass to hugo"
-    required:       false
-
+    description: "Additional arguments to pass to hugo"
+    required:    false
