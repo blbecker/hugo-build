@@ -7,7 +7,7 @@ branding:
 
 runs:
   using:         'docker'
-  image:         'docker://blbecker/hugo-build:1.0'
+  image:         'docker://blbecker/hugo-build:0.111.3'
 
 inputs:
   hugo_args:
