@@ -9,11 +9,7 @@
 
 name: Publish Development Docker image
 
-on:
-  push:
-    branches-ignore:
-      - master
-      - main
+on: [pull_request]
 
 jobs:
   push_to_registry:
