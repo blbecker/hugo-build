@@ -1,8 +1,9 @@
 FROM alpine:latest
 
-LABEL "com.github.actions.name"="Hugo Build"
+ENV HUGO_VERSION="v0.111.3"
 
-LABEL maintainer="benjamin@bckr.me"
+LABEL "com.github.actions.name"="Hugo Build"
+LABEL org.opencontainers.image.authors=="github@mail.bckr.me"
 
 # Configure Go
 ENV GOROOT /usr/lib/go
@@ -11,11 +12,8 @@ ENV PATH /opt/go/bin:$PATH
 
 RUN apk add --no-cache git make musl-dev go g++ bash
 
-RUN mkdir -p /opt/hugo && cd /opt/hugo && \
-    git clone https://github.com/gohugoio/hugo.git && \
-    cd hugo && \
-    go install --tags extended && \
-    cd /root && rm -rf /opt/hugo
+RUN go install -tags extended github.com/gohugoio/hugo@${HUGO_VERSION} && \
+    hugo version
 
 COPY entrypoint.sh /entrypoint.sh
 
